@@ -11,13 +11,14 @@ export default function ResultCard({resultado}) {
 const styles = StyleSheet.create({
     ResultCard: {
         width: 220,
-        margin: 60,
+        margin: 30,
         padding: 10,
         backgroundColor: '#2196f3',
         color: 'white',
         fontSize: 15,
         borderRadius: 10,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 50,
     }
 })

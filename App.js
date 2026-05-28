@@ -10,12 +10,18 @@ export default function App() {
   const [gasolina, definirGasolina] = useState('')
   const [resultado, setResultado] = useState('')
   function calcularVantagem(etanol, gasolina) {
-    const comparacao = etanol / gasolina
+    const eta = parseFloat(etanol)
+    const gas = parseFloat(gasolina)
+    const comparacao = eta / gas
     if (comparacao <= 0.70) {
       return "Etanol vale mais a pena!"
-    } 
-    else {
+    }
+    if (comparacao > 0.70) {
       return "Gasolina vale mais a pena!"
+
+    }
+    else {
+      return "Erro! Insira apenas valores válidos."
     }
   }
   function verificar() {
@@ -87,6 +93,7 @@ const styles = StyleSheet.create({
     alignItems: 'left',
     borderWidth: 1,
     margin:5,
+    marginBottom: 20,
     color: 'white',
     backgroundColor: '#2c2c2c',
     borderColor: '#464646',
